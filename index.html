@@ -171,14 +171,22 @@
 	</div>
 	
 	<script>
-		function SalvarCadastro()
-		{			
-			var Documento = $("#Documento").val();
-			var Nome= $("#nome").val();
-			var Email= $("#email").val();
-			var Telefone= $("#telefone").val();
-			var validar = 1;
-			
+		ListarClientes();
+
+		function SalvarCadastro() {
+
+		var Clientes = {};
+
+		   	Clientes.documento = $("#Documento").val();
+		    Clientes.nome = $("#nome").val();
+		    Clientes.email = $("#email").val();
+		    Clientes.telefone = $("#telefone").val();
+		    Clientes.fax = $("#fax").val();
+		    Clientes.uf = $("#uf").val();
+		    Clientes.sexo = $('input[name="sexo"]:checked').val();
+
+    	var validar = 1;
+	
 			if(Documento == "")
 			{
 				validar = 0;
